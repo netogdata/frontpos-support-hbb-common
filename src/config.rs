@@ -113,8 +113,9 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rs-ny.rustdesk.com"];
-pub const RS_PUB_KEY: &str = "OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=";
+// FrontPOS Support (20. nov 2026): egen RustDesk-server hos Hetzner.
+pub const RENDEZVOUS_SERVERS: &[&str] = &["support.frontpos365.dk"];
+pub const RS_PUB_KEY: &str = "51fDHj4E4PqK4gA4Uu3RNjAVeRhnayRxEvxgORhEi2U=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
