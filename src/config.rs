@@ -82,7 +82,12 @@ lazy_static::lazy_static! {
         ("disable-floating-window".to_owned(), "Y".to_owned()),
     ]));
     pub static ref OVERWRITE_LOCAL_SETTINGS: RwLock<HashMap<String, String>> = Default::default();
-    pub static ref HARD_SETTINGS: RwLock<HashMap<String, String>> = Default::default();
+    // FrontPOS Support: intet login, ingen adressebog/grupper (kræver RustDesks API-server); backoffice
+    // (Fjernsupport) er adressebogen.
+    pub static ref HARD_SETTINGS: RwLock<HashMap<String, String>> = RwLock::new(HashMap::from([
+        ("disable-account".to_owned(), "Y".to_owned()),
+        ("disable-ab".to_owned(), "Y".to_owned()),
+    ]));
     pub static ref BUILTIN_SETTINGS: RwLock<HashMap<String, String>> = Default::default();
 }
 
